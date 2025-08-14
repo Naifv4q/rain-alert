@@ -42,7 +42,7 @@ for hour_data in weather_data["list"]:
    
 if will_rain == True:
     message = client.messages.create(
-        body="بتمطر اليوم بأذن الله 🌧️",
+        body="بتمطر اليوم بإذن الله 🌧️",
         from_=FROM_WHTSP_NUM,
         to= TO_WHTSP_NUM
     )
