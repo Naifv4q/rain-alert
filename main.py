@@ -1,6 +1,6 @@
 import requests
 import os
-from dotenv import load_dotenv,dotenv_values
+from dotenv import load_dotenv
 from twilio.rest import Client
 
 load_dotenv(dotenv_path="C:/Projects/Enviromental Variables/Python/rain-alert-env/config.env")
