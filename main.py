@@ -12,8 +12,8 @@ OMW_ENDPOINT = "https://api.openweathermap.org/data/2.5/forecast"
 
 MY_LAT = 21.251385
 MY_LNG = 81.629639
-FROM_WHTSP_NUM = "whatsapp:+14155238886"
-TO_WHTSP_NUM = "whatsapp:+966537735970"
+FROM_WHTSP_NUM = os.getenv("MY_TWILIO_NUM")
+TO_WHTSP_NUM = os.getenv("MY_NUM")
 
 #Twilio info
 my_acc_sid = os.getenv("ACC_SID")
@@ -44,7 +44,7 @@ if will_rain == True:
     message = client.messages.create(
         body="بتمطر اليوم بإذن الله 🌧️",
         from_=FROM_WHTSP_NUM,
-        to= TO_WHTSP_NUM
+        to= TO_WHTSP_NUM # type: ignore
     )
     print(message.status)
 
